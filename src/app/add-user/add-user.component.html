@@ -1,0 +1,138 @@
+<form id="addUserForm" [formGroup]="addUserForm" (ngSubmit)="addUser()">
+    <br>
+    <div class="ui container">
+        <div class="gem-ui container">
+            <h3 class="ui block header">
+                Add User
+            </h3>
+        </div>
+        <br>
+        <div class="ui container">
+            <label class="image-upload-container btn btn-bwm">
+
+                <a data-tooltip="Upload Image" data-position="bottom left">
+                    <img class="gem-ui-upload-image" src="assets/upload_image.png">
+                </a>
+                <div class="gem-ui-img-upload">
+                    <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)"
+                        formControlName="img">
+                </div>
+            </label>
+            <div *ngIf="selectedFile" class="gem-ui-img-preview-container">
+                <div class="gem-ui-img-preview" [ngStyle]="{'background-image': 'url( '+ selectedFile.src+ ')'}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="ui container">
+        <div class="ui stackable two column grid">
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input type="text" name="firstName" placeholder="First Name" formControlName="firstName">
+                    </div>
+
+                    <div class="field">
+                        <div class="field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Email" formControlName="email">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="field">
+                            <label>Phone Number</label>
+                            <input type="number" name="phoneNumber" placeholder="Phone Number"
+                                formControlName="phoneNumber">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="inline fields">
+                            <div class="field">
+                                <label>Gender</label>
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="gender" value="male" checked="checked"
+                                        formControlName="gender">
+                                    <label>Male</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui radio checkbox">
+                                    <input type="radio" name="gender" value="female" formControlName="gender">
+                                    <label>Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input type="text" name="lastName" placeholder="Last Name" formControlName="lastName">
+                    </div>
+
+                    <div class="field">
+                        <label> Company</label>
+                        <select class="ui fluid dropdown" name="companyName" formControlName="companyName">
+                            <option *ngFor="let company of companyList; let i = index" [value]="companyList[i]">
+                                {{companyList[i]}}</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>Role</label>
+                        <select class="ui fluid dropdown" name="role" formControlName="role">
+                            <option *ngFor="let role of roleList; let i = index" [value]="roleList[i]">{{roleList[i]}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="ui container">
+        <div class="gem-ui-is-admin">
+            <div class="ui checked checkbox">
+                <input type="checkbox" checked="" formControlName="isAdmin">
+                <label>is admin</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <div class="gem-ui-is-procurement">
+            <div class="ui checked checkbox">
+                <input type="checkbox" checked="" formControlName="isProcurement">
+                <label>is procurement</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui container">
+        <div class="gem-ui-active">
+            <div class="inline field">
+                <div class="ui toggle checkbox">
+                    <input type="checkbox" checked="" formControlName="isActive">
+                    <label>Active</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="ui container">
+        <div class="actions gem-ui-create-btn">
+            <button class="ui inverted red button"><i class="cancel icon"></i>Cancel </button>
+            <button class="ui positive right labeled icon button" (click)="ClickButton()">Save<i class="save icon"></i>
+            </button>
+        </div>
+    </div>
+</form>

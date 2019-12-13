@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class=" gem-ui ui stackable menu" style="background-color: rgb(49, 78, 51); height:50px;">
+    <div class="gem-ui item">
+        <img src="assets/gem_logo_img.png" title="GemEngserv">
+    </div>
+
+    <a class="item" style="font-weight: bold; font-size:16px; color:white" title="GemEngserv"> GEM-QC</a>
+
+    <div class="right menu">
+
+        <div class="gem-ui item">
+            <a> <img class="ui mini circular image" src="assets/user-logo.png" (click)="UserModal()"></a>
+        </div>
+
+
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
+
+
+<router-outlet></router-outlet>
+<!-- LOGOUT SECTION START -->
+
+<div class=" ui mini modal logout-gem-ui ">
+    <div class="gem-ui-logout-page">
+        <div class="ui stackable three column grid">
+            <div class="column">
+                <div class="field">
+                    <div class="gem-ui-image-logout-content">
+                        <img class="ui tiny circular image" src="assets/user-logo.png">
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+
+                <div class="field">
+                    <div class="gem-ui-user-name">User Name </div>
+                </div>
+                <br>
+                <div class="field">
+                    <div class="gem-ui-u-name">user.name@gmail.com </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="ui container">
+            <div class="actions gem-ui-logout-btn">
+                <button class="ui positive basic button">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- LOGOUT SECTION END -->

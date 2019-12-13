@@ -1,0 +1,51 @@
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="gem-ui-login-pge">
+        <div class="gem-ui-login">
+            <div class="gem-ui-login-hdr">Admin App</div>
+            <div class="gem-ui-login-cont">
+                <div><input type="text" name="userName" placeholder="User Name" ngModel></div>
+                <div><input type="password" name="password" placeholder="User Password" ngModel></div>
+                <div>Forgot Username / Password?</div>
+                <div class="login-btn">
+                    <button class="ui button" (click)="OtpModal()">Login</button>
+                </div>
+            </div>
+
+            <div class="gem-ui-login-ftr">
+                <!--<div>Don't have an Account</div>
+         <div> SIGN UP NOW</div>-->
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<!-- OTP SECTION START -->
+<div class="ui tiny modal">
+
+    <div class="header">
+        Enter Your OTP
+    </div>
+    <div class="otp content">
+        <div class="ui form">
+
+            <div class="ui six fields gem-ui-otp-field">
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+                <input type="text" maxLength="1" size="1" min="0" max="9" pattern="[0-9]{1}" />
+            </div>
+        </div>
+    </div>
+
+
+    <div class="actions">
+
+        <div class="ui positive right labeled icon button"> Submit <i class="checkmark icon"></i>
+        </div>
+    </div>
+</div>
+<!-- OTP SECTION END -->

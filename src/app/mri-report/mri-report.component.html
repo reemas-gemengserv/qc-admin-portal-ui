@@ -1,0 +1,133 @@
+<!-- <p>mri-report works!</p> -->
+<form id="mriReportForm" [formGroup]="mriReportForm" (ngSubmit)="mriReport()">
+    <br>
+
+
+    <!--START OF PAGE CONTENT PART-->
+    <div class="gem-ui-qc-r-page">
+        <div class="ui form">
+            <div class="fields">
+                <div class="three wide field"> </div>
+                <div class="ten wide field">
+                    <div class="gem-ui-proj-hdr"
+                        style="background:  #fff; overflow: unset !important; height: 130px; padding: 30px 50px ; margin-top:5px">
+                        <div class="ui-desc">
+                            <div>
+                                <div class="ui container">
+                                    <div class="gem-ui-name">
+                                        <h1>Report</h1>
+                                        <hr style="height: 3px; background: rgb(153, 151, 151)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui floating labeled icon dropdown button">
+                            <i class="arrow down icon"></i>
+                            <span class="text">Select Report</span>
+                            <div class="menu">
+                                <div class="item" (click)="mrfiReport()"> MRFI Report</div>
+                                <div class="item"> CRFI Report</div>
+                                <div class="item"> MRFI Report</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--START OF TABLE COUNT SECTION-->
+        <div class="gem-ui-tbl-count" style="display:none;">
+            <div>
+                <h4>
+                    Showing <span id="curr_count"></span> Out Of<span id="total_count"></span>
+                </h4>
+            </div>
+            <div class="ui paging-bar" style="float: right" value=1>
+                <i class="circular inverted left chevron icon gem-pointer" id="prev_page"></i> <i
+                    class="circular inverted right chevron icon gem-pointer" id="next_page"></i>
+                <span style="padding: 0px 10px;">
+                    <div class="ui mini icon input">
+                        <input type="text" placeholder="Search" id="report_search"> <i class="search icon"></i>
+                    </div>
+                </span>
+                <button class="ui mini yellow basic button csv" id="csv_down">
+                    <i class="arrow down icon"></i> CSV Export
+                </button>
+                <div class="ui special popup bottom">
+                    <div class="header">Click Here </div>
+                    <p id="csv_link"></p>
+                </div>
+            </div>
+        </div>
+        <!--END OF TABLE COUNT SECTION-->
+
+        <div class="gem-ui-qc-r-page-cont">
+            <div id="loader"></div>
+
+            <!-- Reports landing page starts here -->
+            <div class="gem-ui-select-rept">
+                <div class="ui text container">
+                    <div>Select Your Report</div>
+                </div>
+            </div>
+            <!-- Reports landing page ends here -->
+        </div>
+
+        <div class="gem-ref-inf-list gem-ui-padd" style="display:none;">
+            <div class="ui gem-ui-segment">
+                <div class="gem-ui-table">
+                    <section class="gem-ui-section">
+                        <div class="gem-ui-tbl-container">
+                            <table class="gem-ui-report-tbl">
+                                <thead class="gem-ui-tbl-header">
+                                    <tr>
+                                        <th>id</th>
+                                        <th>mrfi_sequence_id</th>
+                                        <th>status</th>
+                                        <th>material</th>
+                                        <th>qty</th>
+                                        <th>unit </th>
+                                        <th>created_on</th>
+                                        <th>modified_on </th>
+                                        <th>raised_on </th>
+                                        <th>contractor_executor </th>
+                                        <th>contractor</th>
+                                        <th>client_approver</th>
+                                        <th>vendor</th>
+                                        <th>comment</th>
+                                        <th>mtc</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</form>

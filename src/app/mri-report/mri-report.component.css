@@ -1,0 +1,161 @@
+
+    /* CSS FOR REPORT ONLY... DEPENDING CSS LIKE IMAGE VIEW, LOADER, CHECKLIST ARE STILL IN COMMON CSS(stylr.css) */
+    .gem-filter-sec {
+        /*border: 1px solid;*/
+        padding: 5px 0px;
+        width: 1000px;
+        margin: auto;
+
+
+    }
+
+    .gem-ui-segment {
+        /*border: 1px solid red;*/
+        width: 97%;
+        margin: auto;
+        overflow: auto;
+
+    }
+
+    .gem-ui-table {
+
+        width: 1000px;
+        padding: 30px 10px;
+        height: 580px;
+
+
+
+    }
+
+    .gem-ui-tbl-count {
+
+        margin: 0px 30px;
+        padding: 5px 8px 8px 10px;
+        background: #666;
+        border-radius: 5px;
+    }
+
+    .gem-ui-tbl-count>div {
+        display: inline-block;
+    }
+
+    .gem-ui-tbl-count>div:first-child {
+        padding: 4px 0px;
+        color: #fff;
+    }
+
+    .gem-ui-tbl-count>div span {
+        padding: 0px 7px;
+        color: #a3c293;
+    }
+
+    .gem-ui-float-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        text-align: center;
+        z-index: 998;
+    }
+
+    .gem-ui-float-btn>div {
+        width: 55px;
+        cursor: pointer;
+        height: 55px;
+        border-radius: 50%;
+        border: 1px solid;
+        background: #198f35;
+        color: #fff;
+        transition: 0.2s;
+    }
+
+    .gem-ui-float-btn>div:hover {
+        /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6) !important;*/
+        box-shadow: 0 4px 8px 0 #f0be2c !important;
+        opacity: 0.8;
+    }
+
+    .gem-ui-float-btn>div>i {
+        position: relative;
+        top: 16px;
+        left: 2px;
+    }
+
+    .gem-ui-ref-btn {
+        background: #fff !important;
+        color: green !important;
+        font-size: 16px !important;
+    }
+
+    /* css ofr landing page  */
+    .gem-ui-select-rept>div {
+        font-size: 80px !important;
+        padding: 100px 0px;
+        opacity: 0.2;
+
+    }
+
+    @media screen and (max-width:765px) {
+        .gem-ui-table {
+            width: 460px;
+            margin: auto;
+        }
+    }
+
+    /* CSS FOR REPORTS ONLY ENDS HERE... */
+
+    /* START CHECKLIST MODAL CSS  */
+    .filter-user {
+        height: 300px;
+    }
+
+    /* END CHECKLIST MODAL CSS  */
+
+    /* Start Report Table Styles */
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .gem-ui-report-tbl {
+        border-collapse: collapse;
+        width: 3600px;
+        table-layout: fixed;
+
+    }
+
+    td,
+    th {
+        padding: 6px;
+        min-width: 240px;
+        border-right: 1px solid #ccc
+    }
+
+    .gem-ui-tbl-header tr {
+        background: rgb(63, 62, 62);
+        color: #eee;
+        display: block;
+        position: relative;
+        height: 35px;
+        font-size: 16px;
+
+    }
+
+    .gem-ui-tbl-body {
+        display: block;
+        height: 500px;
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .gem-ui-tbl-body tr:nth-child(even) {
+        background: #ddd;
+    }
+
+    /* End Report Table Styles */
+
+
+
+
+    

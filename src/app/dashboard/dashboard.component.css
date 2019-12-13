@@ -1,0 +1,26 @@
+.gem-ui-img-cont {
+    border: 1px solid red;
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/land.jpg");
+}
+
+.gem-ui-page {
+    padding: 40px 0px;
+}
+
+.content {
+    background: #e95238 !important;
+    color: #fff !important;
+}
+
+.card .header,
+.card .meta {
+    color: #fff !important;
+}
+
+.ui.cards>.card {
+    width: 270px !important;
+}

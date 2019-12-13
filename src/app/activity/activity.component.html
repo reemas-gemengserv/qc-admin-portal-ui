@@ -1,0 +1,33 @@
+<form id="activityForm" [formGroup]="activityForm" (ngSubmit)="activity()">
+    <br>
+    <div class="ui container">
+        <div class="gem-ui container ">
+            <h3 class="ui block header ">
+             Activity
+            </h3>
+        </div>
+    </div>
+    <br>
+    <div class="ui container">
+        <table class="ui celled striped table ">
+            <thead>
+                <tr>
+                    <th id="gem-ui-seno">Se.No.</th>
+                    <th id="gem-ui-activity-name"> Activity Name </th>
+                    <th id="gem-ui-pre"> PRE</th>
+                    <th id="gem-ui-during"> DURING </th>
+                    <th id="gem-ui-post"> POST </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let activity of activityData">
+                    <td >{{activity.SeNo}}</td>
+                    <td>{{activity.name}}</td>
+                    <td><a href="#">{{activity.pre}}</a></td>
+                    <td><a href="#">{{activity.during}}</a></td>
+                    <td><a href="#">{{activity.post}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

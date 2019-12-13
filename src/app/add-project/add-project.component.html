@@ -1,0 +1,160 @@
+<form id="addProjectForm" [formGroup]="addProjectForm" (ngSubmit)="addProject()">
+    <br>
+    <div class="ui container">
+        <div class="gem-ui container">
+            <h3 class="ui block header">
+                Add Project
+            </h3>
+        </div>
+        <br>
+        <div class="ui container">
+            <label class="image-upload-container btn btn-bwm">
+
+                <a data-tooltip="Upload Image" data-position="bottom left">
+                    <img class="gem-ui-upload-image" src="assets/upload_image.png">
+                </a>
+                <div class="gem-ui-img-upload">
+                    <input #imageInput type="file" accept="image/*" (change)="processFile(imageInput)"
+                        formControlName="img">
+                </div>
+
+            </label>
+
+            <div *ngIf="selectedFile" class="gem-ui-img-preview-container">
+                <div class="gem-ui-img-preview" [ngStyle]="{'background-image': 'url( '+ selectedFile.src+ ')'}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="ui container">
+        <div class="ui stackable two column grid">
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>Project Name</label>
+                        <input type="text" name="projectName" placeholder="Project Name" formControlName="projectName">
+                    </div>
+
+                    <div class="field">
+                        <label>Project Code</label>
+                        <input type="text" name="projectCode" placeholder="Project Code" formControlName="projectCode">
+                    </div>
+
+                    <div class="field">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="ui form">
+                    <div class="field">
+                        <label>Project Location</label>
+                        <input type="text" name="projectLocation" placeholder="Project Location"
+                            formControlName="projectLocation">
+                    </div>
+
+                    <div class="field">
+                        <label> Company</label>
+                        <select class="ui fluid dropdown" name="companyName" formControlName="companyName">
+                            <option *ngFor="let company of companyList; let i = index" [value]="companyList[i]">
+                                {{companyList[i]}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="ui container gem-header">
+        <div class="gem-ui-module-container ">
+            <h3 class="ui block header ">
+                Modules
+            </h3>
+        </div>
+
+        <div class="gem-ui container">
+            <div class="ui stackable two column grid">
+                <div class="column">
+                    <br>
+
+                    <div class="gem-ui-per-list">
+                        <div> <label class="gem-ui-crfi">CRFI</label></div>
+                        <div>
+                            <label class="gem-ui-switch" style="margin-left:30px;">
+                                <input type="checkbox" id="crfi" name="toggle" formControlName="crfi">
+                                <span class="gem-ui-slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="gem-ui-per-list">
+                            <div><label>OBS</label></div>
+                            <div>
+                                <label class="gem-ui-switch">
+                                    <input type="checkbox" id="obs" name="toggle" formControlName="obs">
+                                    <span class="gem-ui-slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="gem-ui-per-list">
+                            <div><label>MRFI</label></div>
+                            <div>
+                                <label class="gem-ui-switch">
+                                    <input type="checkbox" id="mrfi" name="toggle" formControlName="mrfi">
+                                    <span class="gem-ui-slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="gem-ui-per-list">
+                        <br>
+                        <div><label>NCR</label></div>
+                        <div>
+                            <label class="gem-ui-switch">
+                                <input type="checkbox" id="ncr" name="toggle" formControlName="ncr">
+                                <span class="gem-ui-slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="gem-ui-per-list">
+                        <div><label>SNAG</label></div>
+                        <div>
+                            <label class="gem-ui-switch">
+                                <input type="checkbox" id="sang" name="toggle" formControlName="sang">
+                                <span class="gem-ui-slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="ui container">
+        <div class="gem-ui-active">
+            <div class="ui checked checkbox">
+                <input type="checkbox" checked="" formControlName="isActive">
+                <label>Active</label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui container">
+        <div class="actions gem-ui-create-btn">
+            <button class="ui inverted red button"><i class="cancel icon"></i>Cancel </button>
+            <button class="ui positive right labeled icon button" (click)="ClickButton()">Save<i class="save icon"></i>
+            </button>
+        </div>
+    </div>
+
+   
+</form>

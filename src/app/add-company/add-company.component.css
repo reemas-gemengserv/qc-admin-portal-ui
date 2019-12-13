@@ -1,0 +1,51 @@
+/*Start CSS for Upload image*/
+
+.gem-ui-upload-image {
+    height: 40px;
+    width: 45px;
+}
+
+.gem-ui-img-upload {
+    display: none;
+}
+
+.gem-ui-img-preview-container {
+    background-color: none;
+    position: relative;
+    padding: 0px 18px;
+    display: inline-block;
+    top:3px;
+    overflow: auto;
+}
+
+.gem-ui-img-preview {
+    background: center center no-repeat;
+    background-size: contain;
+    height: 50px;
+    width: 85px;
+}
+
+/*End CSS for Upload image*/
+
+
+/*Start CSS for active Checkbox*/
+
+.gem-ui-active {
+    text-align: right;
+    align-self: auto;
+}
+
+/*End CSS for active Checkbox*/
+
+
+/* Start CSS for Save button*/
+
+.gem-ui-create-btn {
+    border: none;
+    text-align: right;
+    align-self: auto;
+    margin-top: 10px;
+}
+
+/* End CSS for Save button*/
+

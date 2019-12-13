@@ -1,0 +1,133 @@
+/*LOGIN PAGE CSS START HEAR*/
+
+.gem-ui-login-pge {
+    /*border: 1px solid yellow;*/
+    padding-top: 100px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.gem-ui-login {
+    /*border: 1px solid red;*/
+    width: 350px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.5);
+}
+
+.gem-ui-login-hdr {
+    /*border: 1px solid red;*/
+    background: #42c558;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 30px;
+    color: #fff;
+    font-size: 2.425rem;
+    font-weight: 500;
+    font-family: Sailec-Medium, Helvetica, sans-serif;
+}
+
+.gem-ui-login-cont {
+    text-align: center;
+    /*border: 1px solid;*/
+    height: 280px;
+    padding: 20px;
+}
+
+.gem-ui-login-cont>div {
+    margin: 10px 0px;
+}
+
+.gem-ui-login-cont>div input {
+    height: 37px;
+    width: 90%;
+    margin: auto;
+    padding: 0px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #E0E0E0;
+    font-family: National-Book, Helvetica, sans-serif;
+    font-size: 1.00rem;
+    color: #666;
+}
+
+::placeholder {
+    color: #989898;
+}
+
+.gem-ui-login-cont>div:nth-child(3) {
+    text-align: right;
+    padding: 0px 20px;
+    color: green;
+}
+
+.login-btn {
+    padding: 30px 0px;
+}
+
+.login-btn button {
+    width: 180px;
+    height: 35px;
+    border-radius: 20px !important;
+    background: #42c558 !important;
+    color: #fff !important;
+}
+
+.gem-ui-login-ftr {
+    text-align: center;
+    padding: 5px 0px 25px 0px;
+    font-family: National-Book, Helvetica, sans-serif;
+}
+
+.gem-ui-login-ftr>div:first-child {
+    color: grey;
+}
+
+/* LOGIN PAGE CSS END HEAR*/
+
+
+
+/*............ CSS START FOR OTP PAGE ..............*/
+
+.gem-ui-login-ftr>div:last-child {
+    color: green;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.gem-ui-otp-field > input
+{
+  
+   margin: 0 25px;
+    text-align: center;
+    font-size: 15px;
+    border: solid 1px #ccc;
+    box-shadow: 0 0 5px #ccc inset;
+    outline: none;
+    width: 8%;
+    transition: all .5s ease-in-out;
+    border-radius: 4px;
+}
+
+.gem-ui-otp-field > input:focus{
+    border-color: rgb(43, 130, 243);
+    box-shadow: 0 0 5px rgb(163, 198, 245) inset;
+}
+
+/* START CSS FOR OTP SUBMIT BUTTON*/
+.gem-ui-otp-sub-btn{
+    text-align: right;
+}
+/* END CSS FOR OTP SUBMIT BUTTON*/
+
+
+
+
+/*.......... OTP PAGE CSS END HERE............*/
